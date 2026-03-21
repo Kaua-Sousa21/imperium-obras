@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Imperium Obras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loading">
+  <div class="spinner"></div>
+</div>
+
+<div class="container">
+
+<header>
+  <nav>
+    <ul>
+      <li><a onclick="showSection('home')">Home</a></li>
+      <li><a onclick="showSection('projetos')">Projetos</a></li>
+      <li><a onclick="showSection('equipe')">Equipe</a></li>
+      <li><a onclick="showSection('contato')">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="active">
+
+  <div class="content">
+    <div class="text-content">
+      <h1>Imperium Obras</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button><a onclick="showSection('contato')">Entre em Contato</a></button>
+    </div>
+    <img src="Ok.png" alt="">
+  </div>
+
+  <!-- ONDAS-->
+  <svg class="waves" viewBox="0 0 1440 400" preserveAspectRatio="none">
+    <path fill="#ffe082" d="M0,250 C250,320 450,180 700,230 C950,280 1150,360 1440,260 L1440,400 L0,400 Z"></path>
+    <path fill="#ffd54f" d="M0,280 C250,350 450,210 700,260 C950,310 1150,390 1440,290 L1440,400 L0,400 Z"></path>
+    <path fill="#ffb300" d="M0,310 C250,380 450,240 700,290 C950,340 1150,420 1440,320 L1440,400 L0,400 Z"></path>
+  </svg>
+
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <div class="content">
+    <h2>Projetos</h2>
+    <div class="grid">
+      <div class="card">Casa Moderna</div>
+      <div class="card">Prédio Comercial</div>
+      <div class="card">Interior Design</div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section id="equipe">
+  <div class="content" style="width:100%">
+    <h2>Equipe</h2>
+    <div class="grid">
+
+      <div class="card">
+        <img src="#" />
+        <h3>Nome</h3>
+        <span>Arquiteto</span>
+      </div>
+
+      <div class="card">
+        <img src="#" />
+        <h3>Nome</h3>
+        <span>Designer</span>
+      </div>
+
+      <div class="card">
+        <img src="#" />
+        <h3>Nome</h3>
+        <span>Engenheiro</span>
+      </div>
+
+      <div class="card">
+        <img src="#" />
+        <h3>Nome</h3>
+        <span>Arquiteto</span>
+      </div>
+
+      <div class="card">
+        <img src="#" />
+        <h3>Nome</h3>
+        <span>Designer</span>
+      </div>
+
+      <div class="card">
+        <img src="#" />
+        <h3>Nome</h3>
+        <span>Engenheiro</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="content">
+    <h2>Contato</h2>
+    <p>Email: contato@imperium.com</p>
+    <p>Telefone: (00) 0000-0000</p>
+  </div>
+</section>
+
+</div>
+
+<script>
+function showSection(id){
+  const sections = document.querySelectorAll('section');
+  sections.forEach(sec => sec.classList.remove('active'));
+
+  const target = document.getElementById(id);
+  target.classList.add('active');
+
+  const cards = target.querySelectorAll('.card');
+  cards.forEach((card,i)=>{
+    card.classList.remove('show');
+    setTimeout(()=>{
+      card.classList.add('show');
+    }, i*120);
+  });
+}
+
+window.onload = () => {
+  const loading = document.getElementById('loading');
+  loading.classList.add('hidden');
+  setTimeout(() => {
+    loading.style.display = 'none';
+  }, 500);
+
+
+  const cards = document.querySelectorAll('.active .card');
+  cards.forEach((card,i)=>{
+    setTimeout(()=>{
+      card.classList.add('show');
+    }, i*120);
+  });
+}
+</script>
+
+</body>
+</html>
