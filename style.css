@@ -148,7 +148,7 @@
     }
 
     /* Responsividade */
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
       section {
         padding: 0 40px;
       }
@@ -173,7 +173,7 @@
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       section {
         padding: 0 20px;
       }
@@ -214,3 +214,4 @@
         display: none;
       }
     }
+    
