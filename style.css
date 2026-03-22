@@ -83,6 +83,12 @@
 
     #home .content{display:flex;align-items:center}
 
+    #projetos .content,
+    #equipe .content {
+      max-width: none;
+      width: 100%;
+    }
+
     .text-content{flex:1}
 
     h1{font-size:52px;margin-bottom:20px}
@@ -110,14 +116,14 @@
 
     .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:20px;
       width:100%;
     }
 
     .card{
       background:#fff;
-      padding:20px;
+      padding:30px;
       border-radius:15px;
       box-shadow:0 10px 20px rgba(0,0,0,0.1);
       transform:scale(0.9);
@@ -127,7 +133,7 @@
     }
 
     .card img{
-      width:80px;height:80px;
+      width:130px;height:130px;
       border-radius:50%;
       object-fit:cover;
       margin-bottom:10px;
