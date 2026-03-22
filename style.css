@@ -204,17 +204,8 @@
       .card {
         padding: 10px;
       }
-      .card img {
-        display: none;
-      }
-      #home .content img {
-        display: none;
-      }
-      #contato img {
-        display: none;
-      }
       img{
-        display: none;
+        
       }
     }
     
